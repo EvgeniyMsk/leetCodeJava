@@ -13,7 +13,7 @@ public class Solution {
             num = (long) pivot * pivot;
             if (num > x) {
                 right = pivot - 1;
-            } else if (num < x){
+            } else if (num < x) {
                 left = pivot + 1;
             } else
                 return pivot;
