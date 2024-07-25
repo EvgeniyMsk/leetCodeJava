@@ -6,6 +6,6 @@ public class Solution {
             return false;
         if (n == 1)
             return true;
-        return true;
+        return (Math.floor(Math.log10(n)/Math.log10(2)) - Math.ceil(Math.log10(n)/Math.log10(2))) == 0;
     }
 }
