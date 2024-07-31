@@ -2,6 +2,7 @@ package ou.task590;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Solution {
@@ -9,7 +10,7 @@ public class Solution {
 
     public List<Integer> postorder(Node root) {
         dfs(root);
-        path = path.reversed();
+        Collections.reverse(path);
         return path;
     }
 
@@ -17,9 +18,10 @@ public class Solution {
         if (root == null)
             return;
         path.add(root.val);
+        Collections.reverse(root.children);
         if (root.children != null)
         {
-            for (Node child : root.children.reversed()) {
+            for (Node child : root.children) {
                 dfs(child);
             }
         }
